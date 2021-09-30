@@ -2,8 +2,8 @@ import React from 'react';
 import { any, arrayOf, func, string } from 'prop-types';
 import { Column, Row } from 'simple-flexbox';
 import { createUseStyles, useTheme } from 'react-jss';
-import CollapsibleContent from 'components/collapsible/CollapsibleContent';
-import { useSidebar } from 'hooks/useSidebar';
+import CollapsibleContent from '../../components/collapsible/CollapsibleContent';
+import { useSidebar } from '../../hooks/useSidebar';
 
 const useStyles = createUseStyles({
     activeContainer: {

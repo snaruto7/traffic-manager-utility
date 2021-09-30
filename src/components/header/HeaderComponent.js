@@ -3,10 +3,10 @@ import { string } from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { Row } from 'simple-flexbox';
 import { createUseStyles, useTheme } from 'react-jss';
-import { SidebarContext } from 'hooks/useSidebar';
-import SLUGS from 'resources/slugs';
-import { IconBell, IconSearch } from 'assets/icons';
-import DropdownComponent from 'components/dropdown';
+import { SidebarContext } from '../../hooks/useSidebar';
+import SLUGS from '../../resources/slugs';
+import { IconBell, IconSearch } from '../../assets/icons';
+import DropdownComponent from '../../components/dropdown';
 
 const useStyles = createUseStyles((theme) => ({
     avatar: {

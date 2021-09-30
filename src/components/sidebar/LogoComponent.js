@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row } from 'simple-flexbox';
 import { createUseStyles, useTheme } from 'react-jss';
-import { IconTrafficManagerLogo } from 'assets/icons';
+import { IconTrafficManagerLogo } from '../../assets/icons';
 
 const useStyles = createUseStyles((theme) => ({
     container: {

@@ -1,15 +1,15 @@
 import React from 'react';
 import { createUseStyles, useTheme } from 'react-jss';
 import { useHistory } from 'react-router-dom';
-import SLUGS from 'resources/slugs';
+import SLUGS from '../../resources/slugs';
 import {
     IconContacts,
     IconLogout,
     IconOverview,
     IconSettings,
     IconSubscription
-} from 'assets/icons';
-import { convertSlugToUrl } from 'resources/utilities';
+} from '../../assets/icons';
+import { convertSlugToUrl } from '../../resources/utilities';
 import LogoComponent from './LogoComponent';
 import Menu from './MenuComponent';
 import MenuItem from './MenuItemComponent';

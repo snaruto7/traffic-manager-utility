@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import useWindowSize from 'hooks/useWindowSize';
-import PrivateSection from 'routes/PrivateSection';
-import PublicRoutes from 'routes/PublicRoutes';
+import useWindowSize from '../hooks/useWindowSize';
+import PrivateSection from './PrivateSection';
+import PublicRoutes from './PublicRoutes';
 
 function Routes() {
     const { pathname } = useLocation();

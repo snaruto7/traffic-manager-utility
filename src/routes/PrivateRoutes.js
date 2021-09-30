@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import SLUGS from 'resources/slugs';
-import LoadingComponent from 'components/loading';
+import SLUGS from '../resources/slugs';
+import LoadingComponent from '../components/loading';
 
 const DashboardComponent = lazy(() => import('./dashboard'));
 
