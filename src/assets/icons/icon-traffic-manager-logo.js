@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-    <svg height="32px" width="32px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 81 81" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+    <svg height="32px" width="32px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 81 81" fill="#fff" fillRule="evenodd" stroke="#000" strokeLinecap="round" strokeLinejoin="round">
         <use xlinkHref="#A" x=".5" y=".5"/>
         <symbol id="A" overflow="visible">
             <g stroke="none">

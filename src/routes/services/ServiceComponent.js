@@ -42,7 +42,7 @@ const useStyles = createUseStyles({
     }
 });
 
-function DashboardComponent() {
+function ServiceComponent() {
     const classes = useStyles();
     return (
         <Column>
@@ -70,4 +70,4 @@ function DashboardComponent() {
     );
 }
 
-export default DashboardComponent;
+export default ServiceComponent;

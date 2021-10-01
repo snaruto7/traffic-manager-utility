@@ -86,6 +86,9 @@ function HeaderComponent() {
     function onSettingsClick() {
         push(SLUGS.settings);
     }
+    function onContactsClick() {
+        push(SLUGS.contacts);
+    }
 
     return (
         <Row className={classes.container} vertical='center' horizontal='space-between'>
@@ -132,6 +135,10 @@ function HeaderComponent() {
                         {
                             label: 'Settings',
                             onClick: onSettingsClick
+                        },
+                        {
+                            label: 'Contacts',
+                            onClick: onContactsClick
                         },
                         {
                             label: 'Logout',
