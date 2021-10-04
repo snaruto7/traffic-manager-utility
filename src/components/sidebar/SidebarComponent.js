@@ -53,112 +53,25 @@ function SidebarComponent() {
                 onClick={() => onClick(SLUGS.overview)}
             />
             <MenuItem
-                id={SLUGS.region}
-                title='Region'
+                id={SLUGS.environment}
+                title='Environment'
                 icon={IconIdeas}
-                items={[SLUGS.regionUS, SLUGS.regionWE, SLUGS.regionAU]}
+                items={[SLUGS.regionUSDev, SLUGS.regionUSQA]}
             >
                 <MenuItem
-                    id={SLUGS.regionUS}
-                    title='US'
+                    id={SLUGS.regionUSDev}
+                    title='US-DEV'
                     level={2}
                     icon={IconIdeas}
-                    items={[SLUGS.regionUSDev, SLUGS.regionUSQA, SLUGS.regionUSUAT]}
-                >
-                    <MenuItem
-                        id={SLUGS.regionUS}
-                        title='US-Environment'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionUS)}
-                    />
-                    <MenuItem
-                        id={SLUGS.regionUSDev}
-                        title='DEV'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionUSDev)}
-                    />
-                    <MenuItem
-                        id={SLUGS.regionUSQA}
-                        title='QA'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionUSQA)}
-                    />
-                    <MenuItem
-                        id={SLUGS.regionUSUAT}
-                        title='UAT'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionUSUAT)}
-                    />
-                    <MenuItem
-                        id={SLUGS.regionUSSTG}
-                        title='STAGE'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionUSSTG)}
-                    />
-                    <MenuItem
-                        id={SLUGS.regionUSPRD}
-                        title='PROD'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionUSPRD)}
-                    />
-                </MenuItem>
+                    onClick={() => onClick(SLUGS.regionUSDev)}
+                />
                 <MenuItem
-                    id={SLUGS.regionWE}
-                    title='WE'
+                    id={SLUGS.regionUSQA}
+                    title='US-QA'
                     level={2}
                     icon={IconIdeas}
-                    items={[SLUGS.regionWESTG, SLUGS.regionWEPRD]}
-                >
-                    <MenuItem
-                        id={SLUGS.regionWE}
-                        title='WE-Environment'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionWE)}
-                    />
-                    <MenuItem
-                        id={SLUGS.regionWESTG}
-                        title='STAGE'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionWESTG)}
-                    />
-                    <MenuItem
-                        id={SLUGS.regionWEPRD}
-                        title='PROD'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionWEPRD)}
-                    />
-                </MenuItem>
-                <MenuItem
-                    id={SLUGS.regionAU}
-                    title='AU'
-                    level={2}
-                    icon={IconIdeas}
-                    items={[SLUGS.regionAUPRD]}
-                >
-                    <MenuItem
-                        id={SLUGS.regionAU}
-                        title='AU-Environment'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionAU)}
-                    />
-                    <MenuItem
-                        id={SLUGS.regionAUPRD}
-                        title='PROD'
-                        level={3}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.regionAUPRD)}
-                    />
-                </MenuItem>
+                    onClick={() => onClick(SLUGS.regionUSQA)}
+                />
             </MenuItem>
             <div className={classes.separator}></div>
         </Menu>

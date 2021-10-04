@@ -47,7 +47,7 @@ function ServiceComponent() {
     return (
         <Column>
             <Row className={classes.container}>
-                <Column flexGrow={1} className={classes.mainBlock}>
+                <Column flexGrow={0} className={classes.mainBlock}>
                     <div className={classes.contentBlock}>
                     <p>ServiceName</p>
                     </div>

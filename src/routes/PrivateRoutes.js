@@ -16,16 +16,7 @@ function PrivateRoutes() {
                 <Route exact path={SLUGS.settings} render={() => <div>settings</div>} />
                 <Route exact path={SLUGS.regionUSDev} component={ServiceComponent} />
                 <Route exact path={SLUGS.regionUSQA} component={ServiceComponent} />
-                <Route exact path={SLUGS.regionUSUAT} component={ServiceComponent} />
-                <Route exact path={SLUGS.regionUSSTG} component={ServiceComponent} />
-                <Route exact path={SLUGS.regionUSPRD} component={ServiceComponent} />
-                <Route exact path={SLUGS.regionUS} render={() => <div>US Region</div>} />
-                <Route exact path={SLUGS.regionWESTG} component={ServiceComponent} />
-                <Route exact path={SLUGS.regionWEPRD} component={ServiceComponent} />
-                <Route exact path={SLUGS.regionWE} render={() => <div>WE Region</div>} />
-                <Route exact path={SLUGS.regionAUPRD} component={ServiceComponent} />
-                <Route exact path={SLUGS.regionAU} render={() => <div>AU Region</div>} />
-                <Route exact path={SLUGS.region} render={() => <div>region</div>} />
+                <Route exact path={SLUGS.environment} render={() => <div>region</div>} />
                 <Redirect to={SLUGS.dashboard} />
             </Switch>
         </Suspense>
