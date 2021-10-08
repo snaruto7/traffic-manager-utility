@@ -2,8 +2,6 @@ import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { serviceList} from '../../constants';
 import { createUseStyles } from 'react-jss';
-import Azure from 'azure';
-import MsRest from 'ms-rest-azure';
 
 const useStyles = createUseStyles({
     cardsContainer: {
@@ -43,21 +41,6 @@ const useStyles = createUseStyles({
         }
     }
 });
-
-
-MsRest.loginWithServicePrincipalSecret(
-    'clientId or appId',
-    'secret or password',
-    'domain or tenantId',
-    (err, credentials) => {
-      if (err) throw err
-  
-      let storageClient = Azure.createStorageManagementClient(credentials, 'subscription-id');
-  
-      // ..use the client instance to manage service resources.
-      console.log("Authenticated");
-    }
-  );
 
 function ServiceComponent() {
     const classes = useStyles();
