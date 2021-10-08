@@ -3,6 +3,7 @@
     "version": "0.1.1",
     "private": true,
     "dependencies": {
+        "gh-pages": "^2.0.1",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-burger-menu": "^2.6.13",
@@ -12,12 +13,7 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.3",
         "react-svg-line-chart": "^2.0.1",
-        "azure": "^2.3.1-preview",
-        "gh-pages": "^2.0.1",
-        "ms-rest-azure": "^3.0.0",
-        "simple-flexbox": "^2.3.1",
-        "azure-arm-documentdb": "^1.0.3-preview",
-        "azure-search": "0.0.21"
+        "simple-flexbox": "^2.3.1"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -27,6 +23,7 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
     },
+    "proxy": "http://localhost:5000",
     "eslintConfig": {
         "extends": "react-app"
     },
