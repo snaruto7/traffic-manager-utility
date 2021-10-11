@@ -1,11 +1,13 @@
 {
     "name": "traffic-manager-utility",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "private": true,
     "dependencies": {
         "gh-pages": "^2.0.1",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
+        "react-animated-number": "^0.4.4",
+        "react-async": "^10.0.1",
         "react-burger-menu": "^2.6.13",
         "react-collapsible-content": "^1.0.0",
         "react-dom": "^16.8.6",

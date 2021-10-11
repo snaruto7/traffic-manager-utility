@@ -43,26 +43,19 @@ const useStyles = createUseStyles({
 });
 
 function DashboardComponent() {
+    const [data, setData] = React.useState(null);
     const classes = useStyles();
+    React.useEffect(() => {
+        fetch("/us")
+          .then((res) => (res.ok ? res.json() : Promise.reject(res) ))
+          .then((data) => setData(data.message));
+      }, []);
     return (
         <Column>
             <Row className={classes.container}>
-                <Column flexGrow={1} className={classes.mainBlock}>
+                <Column flexGrow={0} className={classes.mainBlock}>
                     <div className={classes.contentBlock}>
-                    <p>ServiceName</p>
-                    </div>
-                    <div className={classes.contentBlock}>
-                        <select>
-                        {
-                            serviceList.map((item, i) =>{
-                                return(
-                                    <option key={i}>
-                                    {item.value}
-                                    </option>
-                                )
-                            })
-                        }
-                        </select>
+                        <p>{!data ? "Loading..." : data}</p>
                     </div>
                 </Column>
             </Row>
