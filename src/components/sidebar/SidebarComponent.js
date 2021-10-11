@@ -50,8 +50,61 @@ function SidebarComponent() {
                 id={SLUGS.overview}
                 title='Overview'
                 icon={IconOverview}
-                onClick={() => onClick(SLUGS.overview)}
-            />
+                items={[SLUGS.overviewTM, SLUGS.overviewAP]}
+            >
+                <MenuItem
+                    id={SLUGS.overviewTM}
+                    title='Traffic-Manager'
+                    level={2}
+                    icon={IconIdeas}
+                    onClick={() => onClick(SLUGS.overviewTM)}
+                    children={[SLUGS.overviewTMDev, SLUGS.overviewTMQA, SLUGS.overviewTMUAT]}
+                >
+                    <MenuItem
+                        id={SLUGS.overviewTMDev}
+                        title='DEV'
+                        level={3}
+                        icon={IconIdeas}
+                        items={[SLUGS.overviewTMDev, SLUGS.overviewTMQA, SLUGS.overviewTMUAT]}
+                    >
+                        <MenuItem
+                        id={SLUGS.overviewTMDevSummary}
+                        title='Summary'
+                        level={4}
+                        icon={IconIdeas}
+                        onClick={() => onClick(SLUGS.overviewTMDevSummary)}
+                    />
+                    <MenuItem
+                        id={SLUGS.overviewTMDevSwitch}
+                        title='DNS Switch'
+                        level={4}
+                        icon={IconIdeas}
+                        onClick={() => onClick(SLUGS.overviewTMDevSwitch)}
+                    />
+                    </MenuItem>
+                    <MenuItem
+                        id={SLUGS.overviewTMQA}
+                        title='QA'
+                        level={3}
+                        icon={IconIdeas}
+                        onClick={() => onClick(SLUGS.overviewTMQA)}
+                    />
+                    <MenuItem
+                        id={SLUGS.overviewTMUAT}
+                        title='UAT'
+                        level={3}
+                        icon={IconIdeas}
+                        onClick={() => onClick(SLUGS.overviewTMUAT)}
+                    />
+                </MenuItem>
+                <MenuItem
+                    id={SLUGS.overviewAP}
+                    title='Appconfig'
+                    level={2}
+                    icon={IconIdeas}
+                    onClick={() => onClick(SLUGS.overviewAP)}
+                />
+            </MenuItem>
             <MenuItem
                 id={SLUGS.environment}
                 title='Environment'

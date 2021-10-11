@@ -50,29 +50,21 @@ async function Profiles(){
             .then(res => res.json()),
             fetch("/tm/qa")
             .then(res => res.json()),
-            fetch("tm/uat")
+            fetch("/tm/uat")
             .then(res => res.json())
         ]);
         return data;
     } catch(err){
-        console.log(err);
+        console.log(err)
     }
 }
-//   await fetch("/tm/dev")
-//     .then(res => (res.ok ? res : Promise.reject(res)))
-//     .then(res => res.json())
-
-// const qaProfiles = async () =>
-//     await fetch("/tm/qa")
-//       .then(res => (res.ok ? res : Promise.reject(res)))
-//       .then(res => res.json())
 
 // const uatProfiles = async () =>
 //   await fetch("/tm/uat")
 //     .then(res => (res.ok ? res : Promise.reject(res)))
 //     .then(res => res.json())
 
-function OverviewComponent(){
+function OverviewTMComponent(){
     const classes = useStyles();
     //let data = useAsync ({ promise: Profiles })
     const { data, error, isLoading } = useAsync({ promiseFn: Profiles})
@@ -140,4 +132,4 @@ function OverviewComponent(){
 
 
 
-export default OverviewComponent;
+export default OverviewTMComponent;
