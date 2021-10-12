@@ -65,37 +65,67 @@ function SidebarComponent() {
                         title='DEV'
                         level={3}
                         icon={IconIdeas}
-                        items={[SLUGS.overviewTMDev, SLUGS.overviewTMQA, SLUGS.overviewTMUAT]}
+                        items={[SLUGS.overviewTMDevSummary, SLUGS.overviewTMDevSwitch]}
                     >
                         <MenuItem
-                        id={SLUGS.overviewTMDevSummary}
-                        title='Summary'
-                        level={4}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.overviewTMDevSummary)}
-                    />
-                    <MenuItem
-                        id={SLUGS.overviewTMDevSwitch}
-                        title='DNS Switch'
-                        level={4}
-                        icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.overviewTMDevSwitch)}
-                    />
+                            id={SLUGS.overviewTMDevSummary}
+                            title='Summary'
+                            level={4}
+                            icon={IconIdeas}
+                            onClick={() => onClick(SLUGS.overviewTMDevSummary)}
+                        />
+                        <MenuItem
+                            id={SLUGS.overviewTMDevSwitch}
+                            title='DNS Switch'
+                            level={4}
+                            icon={IconIdeas}
+                            onClick={() => onClick(SLUGS.overviewTMDevSwitch)}
+                        />
                     </MenuItem>
                     <MenuItem
                         id={SLUGS.overviewTMQA}
                         title='QA'
                         level={3}
                         icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.overviewTMQA)}
-                    />
+                        items={[SLUGS.overviewTMQASummary, SLUGS.overviewTMQASwitch]}
+                    >
+                        <MenuItem
+                            id={SLUGS.overviewTMQASummary}
+                            title='Summary'
+                            level={4}
+                            icon={IconIdeas}
+                            onClick={() => onClick(SLUGS.overviewTMQASummary)}
+                        />
+                        <MenuItem
+                            id={SLUGS.overviewTMQASwitch}
+                            title='DNS Switch'
+                            level={4}
+                            icon={IconIdeas}
+                            onClick={() => onClick(SLUGS.overviewTMQASwitch)}
+                        />
+                    </MenuItem>
                     <MenuItem
                         id={SLUGS.overviewTMUAT}
                         title='UAT'
                         level={3}
                         icon={IconIdeas}
-                        onClick={() => onClick(SLUGS.overviewTMUAT)}
-                    />
+                        items={[SLUGS.overviewTMUATSummary, SLUGS.overviewTMUATSwitch]}
+                    >
+                        <MenuItem
+                            id={SLUGS.overviewTMUATSummary}
+                            title='Summary'
+                            level={4}
+                            icon={IconIdeas}
+                            onClick={() => onClick(SLUGS.overviewTMUATSummary)}
+                        />
+                        <MenuItem
+                            id={SLUGS.overviewTMDevSwitch}
+                            title='DNS Switch'
+                            level={4}
+                            icon={IconIdeas}
+                            onClick={() => onClick(SLUGS.overviewTMUATSwitch)}
+                        />
+                    </MenuItem>
                 </MenuItem>
                 <MenuItem
                     id={SLUGS.overviewAP}
@@ -103,27 +133,6 @@ function SidebarComponent() {
                     level={2}
                     icon={IconIdeas}
                     onClick={() => onClick(SLUGS.overviewAP)}
-                />
-            </MenuItem>
-            <MenuItem
-                id={SLUGS.environment}
-                title='Environment'
-                icon={IconIdeas}
-                items={[SLUGS.regionUSDev, SLUGS.regionUSQA]}
-            >
-                <MenuItem
-                    id={SLUGS.regionUSDev}
-                    title='US-DEV'
-                    level={2}
-                    icon={IconIdeas}
-                    onClick={() => onClick(SLUGS.regionUSDev)}
-                />
-                <MenuItem
-                    id={SLUGS.regionUSQA}
-                    title='US-QA'
-                    level={2}
-                    icon={IconIdeas}
-                    onClick={() => onClick(SLUGS.regionUSQA)}
                 />
             </MenuItem>
             <div className={classes.separator}></div>

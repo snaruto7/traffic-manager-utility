@@ -2,7 +2,8 @@ import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { createUseStyles } from 'react-jss';
 import { useAsync } from 'react-async';
-import AnimatedNumber from 'react-animated-number';
+import MiniCardComponent from '../../components/cards/MiniCardComponent';
+import TmShortSummary from '../TMSummary/TMShortSummary';
 
 const useStyles = createUseStyles({
     cardsContainer: {
@@ -36,7 +37,7 @@ const useStyles = createUseStyles({
         }
     },
     tasks: {
-        marginTop: 0,
+        marginTop: 20,
         '@media (max-width: 1024px)': {
             marginTop: 30
         }
@@ -73,56 +74,37 @@ function OverviewTMComponent(){
     if (data)
     return (
         <Column>
-            <Row className={classes.container}>
-                <Column flexGrow={1} className={classes.mainBlock}>
-                    <div className={classes.contentBlock}>
-                        <p>DEV</p>
-                        <AnimatedNumber component="text" value={data[0].number}
-                            style = {{
-                                transition: '0.8s ease-out',
-                                fontsize: '16',
-                                transitionProperty:
-                                  'background-color, color, opacity'
-                            }}
-                            frameStyle={perc => (
-                                perc === 100 ? {} : {opacity: 0.25}
-                            )}
-                            stepPrecision={1}
-                            duration={1200} />
+            <Row className={classes.cardRow}>
+                <MiniCardComponent
+                    className={classes.miniCardContainer}
+                    title='DEV'
+                    value={data[0].number}
+                />
+                <MiniCardComponent
+                    className={classes.miniCardContainer}
+                    title='QA'
+                    value={data[1].number}
+                />
+                <MiniCardComponent
+                    className={classes.miniCardContainer}
+                    title='UAT'
+                    value={data[2].number}
+                />
+            </Row>
+            <Row className={classes.tasks}>
+                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
+                    <div>
+                        <TmShortSummary env="dev"/>
                     </div>
                 </Column>
-                <Column flexGrow={1} className={classes.contentBlock}>
-                    <div className={classes.contentBlock}>
-                        <p>QA</p>
-                        <AnimatedNumber component="text" value={data[1].number}
-                            style = {{
-                                transition: '0.8s ease-out',
-                                fontsize: '16',
-                                transitionProperty:
-                                  'background-color, color, opacity'
-                            }}
-                            frameStyle={perc => (
-                                perc === 100 ? {} : {opacity: 0.25}
-                            )}
-                            stepPrecision={1}
-                            duration={1200} />
+                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
+                    <div>
+                        <TmShortSummary env="qa"/>
                     </div>
                 </Column>
-                <Column flexGrow={1} className={classes.mainBlock}>
-                    <div className={classes.contentBlock}>
-                        <p>UAT</p>
-                        <AnimatedNumber component="text" value={data[2].number}
-                            style = {{
-                                transition: '0.8s ease-out',
-                                fontsize: '16',
-                                transitionProperty:
-                                  'background-color, color, opacity'
-                            }}
-                            frameStyle={perc => (
-                                perc === 100 ? {} : {opacity: 0.25}
-                            )}
-                            stepPrecision={1}
-                            duration={1200} />
+                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
+                    <div>
+                        <TmShortSummary env="uat"/>
                     </div>
                 </Column>
             </Row>

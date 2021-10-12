@@ -13,72 +13,72 @@ let WithDevSubscriptionList = function(){
 let UsDev = WithDevSubscriptionList()
 
 UsDev.then(function(result){
-    return result;
+    console.log(result);
 })
 
-let DevProfilesNumber = function(){
+// let DevProfilesNumber = function(){
 
-    return result = tmClient.profiles.listBySubscription()
-    .then(result=>{
-        return result.filter(ele => ele.name.includes("us-dev")).length;
-    })
-}
-let DevProfiles = DevProfilesNumber()
+//     return result = tmClient.profiles.listBySubscription()
+//     .then(result=>{
+//         return result.filter(ele => ele.name.includes("us-dev")).length;
+//     })
+// }
+// let DevProfiles = DevProfilesNumber()
 
-DevProfiles.then(function(result){
-    return result;
-})
+// DevProfiles.then(function(result){
+//     return result;
+// })
 
-let WithQASubscriptionList = function(){
+// let WithQASubscriptionList = function(){
 
-    return result = tmClient.profiles.listBySubscription()
-    .then(result=>{
-        return result.filter(ele => ele.name.includes("us-qa"));
-    })
-}
-let UsQA = WithQASubscriptionList()
+//     return result = tmClient.profiles.listBySubscription()
+//     .then(result=>{
+//         return result.filter(ele => ele.name.includes("us-qa"));
+//     })
+// }
+// let UsQA = WithQASubscriptionList()
 
-UsQA.then(function(result){
-    return result;
-})
+// UsQA.then(function(result){
+//     return result;
+// })
 
-let QaProfilesNumber = function(){
+// let QaProfilesNumber = function(){
 
-    return result = tmClient.profiles.listBySubscription()
-    .then(result=>{
-        return result.filter(ele => ele.name.includes("us-qa")).length;
-    })
-}
-let QaProfiles = QaProfilesNumber()
+//     return result = tmClient.profiles.listBySubscription()
+//     .then(result=>{
+//         return result.filter(ele => ele.name.includes("us-qa")).length;
+//     })
+// }
+// let QaProfiles = QaProfilesNumber()
 
-QaProfiles.then(function(result){
-    return result;
-})
+// QaProfiles.then(function(result){
+//     return result;
+// })
 
-let WithUatSubscriptionList = function(){
+// let WithUatSubscriptionList = function(){
 
-    return result = tmClient.profiles.listBySubscription()
-    .then(result=>{
-        return result.filter(ele => ele.name.includes("us-uat"));
-    })
-}
-let UsUat = WithUatSubscriptionList()
+//     return result = tmClient.profiles.listBySubscription()
+//     .then(result=>{
+//         return result.filter(ele => ele.name.includes("us-uat"));
+//     })
+// }
+// let UsUat = WithUatSubscriptionList()
 
-UsUat.then(function(result){
-    return result;
-})
+// UsUat.then(function(result){
+//     return result;
+// })
 
-let UatProfilesNumber = function(){
+// let UatProfilesNumber = function(){
 
-    return result = tmClient.profiles.listBySubscription()
-    .then(result=>{
-        return result.filter(ele => ele.name.includes("us-uat")).length;
-    })
-}
-let UatProfiles = UatProfilesNumber()
+//     return result = tmClient.profiles.listBySubscription()
+//     .then(result=>{
+//         return result.filter(ele => ele.name.includes("us-uat")).length;
+//     })
+// }
+// let UatProfiles = UatProfilesNumber()
 
-UatProfiles.then(function(result){
-    return result;
-})
+// UatProfiles.then(function(result){
+//     return result;
+// })
 
 module.exports = UsDev

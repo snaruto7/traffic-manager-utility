@@ -6,6 +6,7 @@ import LoadingComponent from '../components/loading';
 const DashboardComponent = lazy(() => import('./dashboard'));
 const ServiceComponent = lazy(() => import('./services'));
 const OverviewTMComponent = lazy(() => import('./overviewTM'));
+const TMSummary = lazy(() => import('./TMSummary'));
 
 function PrivateRoutes() {
     return (
@@ -15,10 +16,14 @@ function PrivateRoutes() {
                 <Route exact path={SLUGS.overview} render={() => <div>Overview</div>} />
                 <Route exact path={SLUGS.overviewTM} component={OverviewTMComponent} />
                 <Route exact path={SLUGS.overviewTMDev} render={() => <div>Dev TM</div>} />
-                <Route exact path={SLUGS.overviewTMDevSummary} render={() => <div>Dev TM Summary</div>} />
+                <Route exact path={SLUGS.overviewTMDevSummary}> <TMSummary env="dev"/> </Route>
                 <Route exact path={SLUGS.overviewTMDevSwitch} render={() => <div>Dev TM Switch</div>} />
                 <Route exact path={SLUGS.overviewTMQA} render={() => <div>QA TM</div>} />
+                <Route exact path={SLUGS.overviewTMQASummary}> <TMSummary env="qa"/> </Route>
+                <Route exact path={SLUGS.overviewTMQASwitch} render={() => <div>QA TM Switch</div>} />
                 <Route exact path={SLUGS.overviewTMUAT} render={() => <div>UAT TM</div>} />
+                <Route exact path={SLUGS.overviewTMUATSummary}> <TMSummary env="uat"/> </Route>
+                <Route exact path={SLUGS.overviewTMUATSwitch} render={() => <div>UAT TM Switch</div>} />
                 <Route exact path={SLUGS.overviewAP} render={() => <div>Appconfig</div>} />
                 <Route exact path={SLUGS.contacts} render={() => <div>contacts</div>} />
                 <Route exact path={SLUGS.settings} render={() => <div>settings</div>} />

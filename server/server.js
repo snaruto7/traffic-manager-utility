@@ -13,6 +13,14 @@ function GetProfilesNumber(env) {
         return  result.filter(ele => ele.name.includes(env)).length;
     })
 }
+
+function GetProfiles(env){
+  return result = tmClient.profiles.listBySubscription()
+    .then(result =>{
+      return result.filter(ele => ele.name.includes(env))
+    })
+}
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get('/us', (req, res) => { 
@@ -29,6 +37,16 @@ app.get('/tm/dev', async (req, res) => {
   res.send({ number: dev });
 });
 
+app.get('/tm/dev/summary', async (req, res) => { 
+  let Profile = GetProfiles("us-dev");
+
+  dev = await Profile.then(function(result){
+    return result
+  })
+
+  res.send({ profiles: dev });
+});
+
 app.get('/tm/qa', async (req, res) => { 
   let Profile = GetProfilesNumber("us-qa");
 
@@ -39,6 +57,16 @@ app.get('/tm/qa', async (req, res) => {
   res.send({ number: qa });
 });
 
+app.get('/tm/qa/summary', async (req, res) => { 
+  let Profile = GetProfiles("us-qa");
+
+  qa = await Profile.then(function(result){
+    return result
+  })
+
+  res.send({ profiles: qa });
+});
+
 app.get('/tm/uat', async (req, res) => { 
   let Profile = GetProfilesNumber("us-uat");
 
@@ -47,4 +75,14 @@ app.get('/tm/uat', async (req, res) => {
   })
 
   res.send({ number: uat });
+});
+
+app.get('/tm/uat/summary', async (req, res) => { 
+  let Profile = GetProfiles("us-uat");
+
+  uat = await Profile.then(function(result){
+    return result
+  })
+
+  res.send({ profiles: uat });
 });
