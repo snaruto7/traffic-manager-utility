@@ -1,6 +1,5 @@
 import React from 'react';
 import { Column, Row } from 'simple-flexbox';
-import { serviceList} from '../../constants';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({

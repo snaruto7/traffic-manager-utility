@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row } from 'simple-flexbox';
 import { createUseStyles, useTheme } from 'react-jss';
-import { IconTrafficManagerLogo } from '../../assets/icons';
 
 const useStyles = createUseStyles((theme) => ({
     container: {
@@ -21,8 +20,7 @@ function LogoComponent() {
     const classes = useStyles({ theme });
     return (
         <Row className={classes.container} horizontal='center' vertical='center'>
-            <IconTrafficManagerLogo />
-            <span className={classes.title}>TM Utility</span>
+            <span className={classes.title}>DevOps Utility</span>
         </Row>
     );
 }

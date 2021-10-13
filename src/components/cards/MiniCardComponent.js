@@ -35,12 +35,18 @@ const useStyles = createUseStyles((theme) => ({
     }
 }));
 
-function MiniCardComponent({ className = '', title, value }) {
+function MiniCardComponent({ className = '', title, value, onClick}) {
     const theme = useTheme();
     const classes = useStyles({ theme });
     const composedClassName = [classes.container, className].join(' ');
+    function onItemClicked(e) {
+        if (onClick) {
+            onClick(e);
+        }
+    }
+
     return (
-        <Column flexGrow={1} className={composedClassName} horizontal='center' vertical='center'>
+        <Column flexGrow={1} className={composedClassName} horizontal='center' vertical='center' onClick={onItemClicked} >
             <span className={classes.title}>{title}</span>
             <span className={classes.value}>
             <AnimatedNumber value={value}

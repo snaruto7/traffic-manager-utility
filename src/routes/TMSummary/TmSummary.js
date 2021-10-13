@@ -44,7 +44,6 @@ const useStyles = createUseStyles({
 
 function TmSummary(props){
     const classes = useStyles();
-    const env = props.env
     const [loadingData, setLoadingData] = useState(true);
     const columns = useMemo(() => [
         {
@@ -67,7 +66,6 @@ function TmSummary(props){
             Header: "Second Priority",
             accessor: "endpoints[1].name"
         },
-
       ]);
 
       const [data, setData] = useState([]);
@@ -75,7 +73,7 @@ function TmSummary(props){
       useEffect(() => {
         async function getData(){
             try{
-                var url = "/tm/" + env + "/summary";
+                var url = "/tm/" + props.env + "/summary";
                 var data = await fetch(url)
                     .then(res => (res.ok ? res : Promise.reject(res)))
                     .then(res => res.json())
@@ -87,14 +85,12 @@ function TmSummary(props){
             }
         }
         if (loadingData) {
-          
           getData();
         }
-      }, []);
+      }, [props.env]);
 
       return (
-        <div className={classes.contentBlock}>
-          {/* here you check if the state is loading otherwise if you wioll not call that you will get a blank page because the data is an empty array at the moment of mounting */}
+        <div id={props.env} className={classes.contentBlock}>
           {loadingData ? (
             <p>Loading Please wait...</p>
           ) : (
