@@ -44,7 +44,6 @@ const useStyles = createUseStyles({
 
 function TmSummary(props){
     const classes = useStyles();
-    console.log(props.env);
     const [loadingData, setLoadingData] = useState(true);
     const columns = useMemo(() => [
         {

@@ -6,7 +6,9 @@ import Packagejson from '../../../package.json'
 import {
     IconIdeas,
     IconOverview,
-    IconSubscription
+    IconSubscription,
+    IconAppConfigurationLogo,
+    IconTrafficManagerLogo
 } from '../../assets/icons';
 import { convertSlugToUrl } from '../../resources/utilities';
 import LogoComponent from './LogoComponent';
@@ -70,14 +72,14 @@ function SidebarComponent() {
                     id={SLUGS.overviewTM}
                     title='Traffic-Manager'
                     level={2}
-                    icon={IconIdeas}
+                    icon={IconTrafficManagerLogo}
                     onClick={() => onClick(SLUGS.overviewTM)}/>
     
                 <MenuItem
                     id={SLUGS.overviewAP}
                     title='Appconfig'
                     level={2}
-                    icon={IconIdeas}
+                    icon={IconAppConfigurationLogo}
                     onClick={() => onClick(SLUGS.overviewAP)}
                 />
             </MenuItem>
@@ -85,7 +87,7 @@ function SidebarComponent() {
             <MenuItem
                     id={SLUGS.overviewTMExpand}
                     title='Traffic-Manager'
-                    icon={IconIdeas}
+                    icon={IconTrafficManagerLogo}
                     children={[SLUGS.overviewTMDev, SLUGS.overviewTMQA, SLUGS.overviewTMUAT]}
                 >
                     <MenuItem
@@ -99,14 +101,14 @@ function SidebarComponent() {
                             id={SLUGS.overviewTMDevSummary}
                             title='Summary'
                             level={3}
-                            icon={IconIdeas}
+                            icon={IconTrafficManagerLogo}
                             onClick={() => onClick(SLUGS.overviewTMDevSummary)}
                         />
                         <MenuItem
                             id={SLUGS.overviewTMDevSwitch}
                             title='DNS Switch'
                             level={3}
-                            icon={IconIdeas}
+                            icon={IconTrafficManagerLogo}
                             onClick={() => onClick(SLUGS.overviewTMDevSwitch)}
                         />
                     </MenuItem>
@@ -121,14 +123,14 @@ function SidebarComponent() {
                             id={SLUGS.overviewTMQASummary}
                             title='Summary'
                             level={3}
-                            icon={IconIdeas}
+                            icon={IconTrafficManagerLogo}
                             onClick={() => onClick(SLUGS.overviewTMQASummary)}
                         />
                         <MenuItem
                             id={SLUGS.overviewTMQASwitch}
                             title='DNS Switch'
                             level={3}
-                            icon={IconIdeas}
+                            icon={IconTrafficManagerLogo}
                             onClick={() => onClick(SLUGS.overviewTMQASwitch)}
                         />
                     </MenuItem>
@@ -143,14 +145,14 @@ function SidebarComponent() {
                             id={SLUGS.overviewTMUATSummary}
                             title='Summary'
                             level={3}
-                            icon={IconIdeas}
+                            icon={IconTrafficManagerLogo}
                             onClick={() => onClick(SLUGS.overviewTMUATSummary)}
                         />
                         <MenuItem
                             id={SLUGS.overviewTMUATSwitch}
                             title='DNS Switch'
                             level={3}
-                            icon={IconIdeas}
+                            icon={IconTrafficManagerLogo}
                             onClick={() => onClick(SLUGS.overviewTMUATSwitch)}
                         />
                     </MenuItem>
@@ -158,7 +160,7 @@ function SidebarComponent() {
                 <MenuItem
                     id={SLUGS.overviewAPExpand}
                     title='Appconfig'
-                    icon={IconIdeas}
+                    icon={IconAppConfigurationLogo}
                 />
             <div className={classes.div}>
                 <p>Client Version: {Packagejson.version}</p>

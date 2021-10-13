@@ -15,6 +15,7 @@ import IconSettings from './icon-settings';
 import IconSubscription from './icon-subscription';
 import IconTickets from './icon-tickets';
 import IconTrafficManagerLogo from './icon-traffic-manager-logo';
+import IconAppConfigurationLogo from './icon-app-configuration-logo';
 
 export {
     IconCheckboxOff,
@@ -33,5 +34,6 @@ export {
     IconSettings,
     IconSubscription,
     IconTickets,
-    IconTrafficManagerLogo
+    IconTrafficManagerLogo,
+    IconAppConfigurationLogo
 };
