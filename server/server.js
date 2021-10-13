@@ -1,5 +1,6 @@
 const { credentials, subscriptionId } = require( './credential' );
 const { TrafficManagerManagementClient } = require("@azure/arm-trafficmanager");
+const PackageJson = require('./package.json');
 
 const tmClient = new TrafficManagerManagementClient(credentials, subscriptionId);
 
@@ -85,4 +86,8 @@ app.get('/tm/uat/summary', async (req, res) => {
   })
 
   res.send({ profiles: uat });
+});
+
+app.get('/version', (req, res) => { 
+  res.send({ version: PackageJson.version });
 });
