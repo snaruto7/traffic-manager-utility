@@ -1,5 +1,13 @@
 import React from "react";
 import { useTable } from "react-table";
+import Popup from "reactjs-popup";
+
+// function handleClick(data, callBack){
+//   console.log(data);
+//   <Popup trigger={callBack} modal>
+//     <span>Content</span>
+//   </Popup>
+// }
 
 function Table({ columns, data }) {
   
@@ -45,7 +53,7 @@ function Table({ columns, data }) {
         {rows.map((row, i) => {
           prepareRow(row);
           return (
-            <tr {...row.getRowProps()}>
+            <tr {...row.getRowProps()} onClick={() => console.log(row.original)}>
               {row.cells.map((cell) => {
                 return (
                   <td {...cell.getCellProps()}>

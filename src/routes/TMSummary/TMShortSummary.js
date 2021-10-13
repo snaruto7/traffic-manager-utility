@@ -52,8 +52,12 @@ function TmShortSummary(props){
           accessor: "name",
         },
         {
-          Header: "Status",
-          accessor: "profileStatus",
+          Header: "Priority",
+          accessor: "endpoints[0].name",
+          Cell: (row) => {
+            const result = row.value;
+            return result.includes("green") ? "Green" : "Blue";
+          }
         },
       ]);
 
