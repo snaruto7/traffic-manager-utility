@@ -25,7 +25,7 @@ function GetProfiles(env){
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get('/us', (req, res) => { 
-    res.send({ message: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+    res.send({ message: 'Coming Soon......' });
 });
 
 app.get('/tm/dev', async (req, res) => { 

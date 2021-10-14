@@ -8,7 +8,10 @@ import {
     IconOverview,
     IconSubscription,
     IconAppConfigurationLogo,
-    IconTrafficManagerLogo
+    IconTrafficManagerLogo,
+    IconVaultLogo,
+    IconJiraLogo,
+    IconPipelinesLogo
 } from '../../assets/icons';
 import { convertSlugToUrl } from '../../resources/utilities';
 import LogoComponent from './LogoComponent';
@@ -66,101 +69,112 @@ function SidebarComponent() {
                 id={SLUGS.overview}
                 title='Overview'
                 icon={IconOverview}
-                items={[SLUGS.overviewTM, SLUGS.overviewAP]}
+                onClick={() => onClick(SLUGS.overview)}
             >
-                <MenuItem
-                    id={SLUGS.overviewTM}
-                    title='Traffic-Manager'
-                    level={2}
-                    icon={IconTrafficManagerLogo}
-                    onClick={() => onClick(SLUGS.overviewTM)}/>
-    
-                <MenuItem
-                    id={SLUGS.overviewAP}
-                    title='Appconfig'
-                    level={2}
-                    icon={IconAppConfigurationLogo}
-                    onClick={() => onClick(SLUGS.overviewAP)}
-                />
             </MenuItem>
             <div className={classes.separator}></div>
             <MenuItem
-                    id={SLUGS.overviewTMExpand}
+                    id={SLUGS.TMExpand}
                     title='Traffic-Manager'
                     icon={IconTrafficManagerLogo}
-                    children={[SLUGS.overviewTMDev, SLUGS.overviewTMQA, SLUGS.overviewTMUAT]}
+                    children={[SLUGS.TMDev, SLUGS.TMQA, SLUGS.TMUAT]}
                 >
                     <MenuItem
-                        id={SLUGS.overviewTMDev}
+                        id={SLUGS.TMDev}
                         title='DEV'
                         level={2}
                         icon={IconIdeas}
-                        items={[SLUGS.overviewTMDevSummary, SLUGS.overviewTMDevSwitch]}
+                        items={[SLUGS.TMDevSummary, SLUGS.TMDevSwitch]}
                     >
                         <MenuItem
-                            id={SLUGS.overviewTMDevSummary}
+                            id={SLUGS.TMDevSummary}
                             title='Summary'
                             level={3}
                             icon={IconTrafficManagerLogo}
-                            onClick={() => onClick(SLUGS.overviewTMDevSummary)}
+                            onClick={() => onClick(SLUGS.TMDevSummary)}
                         />
                         <MenuItem
-                            id={SLUGS.overviewTMDevSwitch}
+                            id={SLUGS.TMDevSwitch}
                             title='DNS Switch'
                             level={3}
                             icon={IconTrafficManagerLogo}
-                            onClick={() => onClick(SLUGS.overviewTMDevSwitch)}
+                            onClick={() => onClick(SLUGS.TMDevSwitch)}
                         />
                     </MenuItem>
                     <MenuItem
-                        id={SLUGS.overviewTMQA}
+                        id={SLUGS.TMQA}
                         title='QA'
                         level={2}
                         icon={IconIdeas}
-                        items={[SLUGS.overviewTMQASummary, SLUGS.overviewTMQASwitch]}
+                        items={[SLUGS.TMQASummary, SLUGS.TMQASwitch]}
                     >
                         <MenuItem
-                            id={SLUGS.overviewTMQASummary}
+                            id={SLUGS.TMQASummary}
                             title='Summary'
                             level={3}
                             icon={IconTrafficManagerLogo}
-                            onClick={() => onClick(SLUGS.overviewTMQASummary)}
+                            onClick={() => onClick(SLUGS.TMQASummary)}
                         />
                         <MenuItem
-                            id={SLUGS.overviewTMQASwitch}
+                            id={SLUGS.TMQASwitch}
                             title='DNS Switch'
                             level={3}
                             icon={IconTrafficManagerLogo}
-                            onClick={() => onClick(SLUGS.overviewTMQASwitch)}
+                            onClick={() => onClick(SLUGS.TMQASwitch)}
                         />
                     </MenuItem>
                     <MenuItem
-                        id={SLUGS.overviewTMUAT}
+                        id={SLUGS.TMUAT}
                         title='UAT'
                         level={2}
                         icon={IconIdeas}
-                        items={[SLUGS.overviewTMUATSummary, SLUGS.overviewTMUATSwitch]}
+                        items={[SLUGS.TMUATSummary, SLUGS.TMUATSwitch]}
                     >
                         <MenuItem
-                            id={SLUGS.overviewTMUATSummary}
+                            id={SLUGS.TMUATSummary}
                             title='Summary'
                             level={3}
                             icon={IconTrafficManagerLogo}
-                            onClick={() => onClick(SLUGS.overviewTMUATSummary)}
+                            onClick={() => onClick(SLUGS.TMUATSummary)}
                         />
                         <MenuItem
-                            id={SLUGS.overviewTMUATSwitch}
+                            id={SLUGS.TMUATSwitch}
                             title='DNS Switch'
                             level={3}
                             icon={IconTrafficManagerLogo}
-                            onClick={() => onClick(SLUGS.overviewTMUATSwitch)}
+                            onClick={() => onClick(SLUGS.TMUATSwitch)}
                         />
                     </MenuItem>
                 </MenuItem>
                 <MenuItem
-                    id={SLUGS.overviewAPExpand}
+                    id={SLUGS.APExpand}
                     title='Appconfig'
                     icon={IconAppConfigurationLogo}
+                    onClick={() => onClick(SLUGS.APExpand)}
+                />
+                <MenuItem
+                    id={SLUGS.Vault}
+                    title='Vault'
+                    icon={IconVaultLogo}
+                    onClick={() => onClick(SLUGS.Vault)}
+                />
+                <MenuItem
+                    id={SLUGS.Jira}
+                    title='Jira'
+                    icon={IconJiraLogo}
+                    onClick={() => onClick(SLUGS.Jira)}
+                />
+                <MenuItem
+                    id={SLUGS.Pipelines}
+                    title='Release Pipelines'
+                    icon={IconPipelinesLogo}
+                    onClick={() => onClick(SLUGS.Pipelines)}
+                />
+                <MenuItem
+                    id={SLUGS.Connections}
+                    title='Connection Status'
+                    icon={IconAppConfigurationLogo}
+                    onClick={() => onClick(SLUGS.Connections)}
                 />
             <div className={classes.div}>
                 <p>Client Version: {Packagejson.version}</p>

@@ -2,11 +2,10 @@ import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { createUseStyles } from 'react-jss';
 import { useHistory } from 'react-router-dom';
-import { useAsync } from 'react-async';
-import MiniCardComponent from '../../components/cards/MiniCardComponent';
-import TmShortSummary from '../TMSummary/TMShortSummary';
+import OverviewCardComponent from '../../components/cards/OverviewCardComponent';
 import { convertSlugToUrl } from '../../resources/utilities';
 import SLUGS from '../../resources/slugs';
+import { useAsync } from 'react-async';
 
 const useStyles = createUseStyles({
     cardsContainer: {
@@ -57,16 +56,12 @@ async function Profiles(){
             fetch("/tm/uat")
             .then(res => res.json())
         ]);
-        return data;
+        var tmProfiles = data[0].number + data[1].number + data[2].number
+        return tmProfiles;
     } catch(err){
         console.log(err)
     }
 }
-
-// const uatProfiles = async () =>
-//   await fetch("/tm/uat")
-//     .then(res => (res.ok ? res : Promise.reject(res)))
-//     .then(res => res.json())
 
 function OverviewComponent(){
     const classes = useStyles();
@@ -81,47 +76,57 @@ function OverviewComponent(){
     if (data)
     return (
         <Column>
-            <Row className={classes.cardRow}>
-                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
-                    <MiniCardComponent
+            <Row className={classes.cardRow} >
+                <Column flexGrow={1} className={classes.mainBlock} >
+                    <OverviewCardComponent
                         className={classes.miniCardContainer}
-                        title='DEV'
-                        value={data[0].number}
-                        onClick={() => onClick(SLUGS.TMDevSummary)}
+                        title='Traffic-Manager'
+                        value={data}
+                        onClick={() => onClick(SLUGS.TMExpand)}
                     />
                 </Column>
-                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
-                    <MiniCardComponent
+                <Column flexGrow={1} className={classes.mainBlock} >
+                    <OverviewCardComponent
                         className={classes.miniCardContainer}
-                        title='QA'
-                        value={data[1].number}
-                        onClick={() => onClick(SLUGS.TMQASummary)}
+                        title='App Configuration'
+                        value='0'
+                        onClick={() => onClick(SLUGS.APExpand)}
                     />
                 </Column>
-                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
-                    <MiniCardComponent
+                <Column flexGrow={1} className={classes.mainBlock} >
+                    <OverviewCardComponent
                         className={classes.miniCardContainer}
-                        title='UAT'
-                        value={data[2].number}
-                        onClick={() => onClick(SLUGS.TMUATSummary)}
+                        title='Vault'
+                        value='0'
+                        onClick={() => onClick(SLUGS.Vault)}
                     />
                 </Column>
             </Row>
-            <Row className={classes.tasks}>
-                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
-                    <div>
-                        <TmShortSummary env="dev"/>
-                    </div>
+            <br />
+            <Row>
+                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between' >
+                    <OverviewCardComponent
+                        className={classes.miniCardContainer}
+                        title='Jira'
+                        value='0'
+                        onClick={() => onClick(SLUGS.Jira)}
+                    />
                 </Column>
-                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
-                    <div>
-                        <TmShortSummary env="qa"/>
-                    </div>
+                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between' >
+                    <OverviewCardComponent
+                        className={classes.miniCardContainer}
+                        title='Release Pipelines'
+                        value='0' 
+                        onClick={() => onClick(SLUGS.Pipelines)}
+                    />
                 </Column>
-                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between'>
-                    <div>
-                        <TmShortSummary env="uat"/>
-                    </div>
+                <Column flexGrow={1} className={classes.mainBlock} horizontal='space-between' >
+                    <OverviewCardComponent
+                        className={classes.miniCardContainer}
+                        title='Connections & Health'
+                        value='0'
+                        onClick={() => onClick(SLUGS.Connections)}
+                    />
                 </Column>
             </Row>
         </Column>

@@ -32,11 +32,12 @@ const useStyles = createUseStyles((theme) => ({
         fontSize: 40,
         letterSpacing: '1px',
         lineHeight: '50px',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 20
     }
 }));
 
-function MiniCardComponent({ className = '', title, value, onClick}) {
+function OverviewCardComponent({ className = '', title, value, onClick}) {
     const theme = useTheme();
     const classes = useStyles({ theme });
     const composedClassName = [classes.container, className].join(' ');
@@ -49,6 +50,7 @@ function MiniCardComponent({ className = '', title, value, onClick}) {
     return (
         <Column flexGrow={1} className={composedClassName} horizontal='center' vertical='center' onClick={onItemClicked} >
             <span className={classes.title}>{title}</span>
+            <br />
             <span className={classes.value}>
             <AnimatedNumber value={value}
                 style = {{
@@ -67,4 +69,4 @@ function MiniCardComponent({ className = '', title, value, onClick}) {
     );
 }
 
-export default MiniCardComponent;
+export default OverviewCardComponent;

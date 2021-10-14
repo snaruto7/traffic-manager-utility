@@ -1,6 +1,6 @@
 {
   "name": "tm-utility-server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple TM Utility Server",
   "main": "server.js",
   "dependencies": {
