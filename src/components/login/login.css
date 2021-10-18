@@ -1,0 +1,77 @@
+.demo-login-div {
+    max-width: 460px;
+    box-shadow: 0 0.0625rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.16);
+    padding-top: 20px;
+    padding-left: 41px;
+    padding-right: 41px;
+    padding-bottom: 42px;
+  }
+  
+  .a-login-wrapper .a-login-same-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .a-login-wrapper .padding-top-40 {
+    padding-top: 40px;
+  }
+  .a-login-wrapper .center-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .a-login-wrapper .a-login-upper-info {
+    position: relative;
+  }
+  .a-login-wrapper .a-login-upper-info .a-login-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .a-login-wrapper .a-login-upper-info .a-login-logo {
+    margin-bottom: 38.9px;
+    margin-top: 20px;
+  }
+  .a-login-wrapper .a-login-upper-info .a-login-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.58;
+    margin-bottom: 0.625rem;
+  }
+  .a-login-wrapper .a-login-upper-info .a-login-info {
+    font-size: 1rem;
+    line-height: 2.38;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+  .a-login-wrapper .a-login-upper-info .a-login-reset-password-info {
+    color: #666;
+    font-size: 0.875rem;
+    line-height: 1.58;
+    width: 21.25rem;
+    margin: auto;
+  }
+  .a-login-wrapper .a-login-middle-part {
+    position: relative;
+  }
+  .a-login-wrapper .a-login-middle-part .a-login-error-info {
+    position: absolute;
+    padding-top: 0.625rem;
+    font-size: 0.875rem;
+    line-height: 1.71;
+    color: #e0301e;
+  }
+  .a-login-wrapper .showResetPassword {
+    height: 50px;
+    justify-content: space-between;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .a-login-wrapper .a-login-reset-cancel,
+  .a-login-wrapper .a-login-go-reset {
+    font-size: .875rem;
+    line-height: 1.14;
+    color: #d04a02;
+    cursor: pointer;
+    background: transparent;
+  }

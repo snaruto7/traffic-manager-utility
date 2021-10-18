@@ -19,6 +19,7 @@ import IconAppConfigurationLogo from './icon-app-configuration-logo';
 import IconVaultLogo from './icon-vault-logo';
 import IconJiraLogo from './icon-jira-logo';
 import IconPipelinesLogo from './icon-pipelines-logo';
+import IconConnection from './icon-connection';
 
 export {
     IconCheckboxOff,
@@ -41,5 +42,6 @@ export {
     IconAppConfigurationLogo,
     IconVaultLogo,
     IconJiraLogo,
-    IconPipelinesLogo
+    IconPipelinesLogo,
+    IconConnection
 };

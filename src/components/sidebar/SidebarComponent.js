@@ -11,7 +11,8 @@ import {
     IconTrafficManagerLogo,
     IconVaultLogo,
     IconJiraLogo,
-    IconPipelinesLogo
+    IconPipelinesLogo,
+    IconConnection
 } from '../../assets/icons';
 import { convertSlugToUrl } from '../../resources/utilities';
 import LogoComponent from './LogoComponent';
@@ -173,7 +174,7 @@ function SidebarComponent() {
                 <MenuItem
                     id={SLUGS.Connections}
                     title='Connection Status'
-                    icon={IconAppConfigurationLogo}
+                    icon={IconConnection}
                     onClick={() => onClick(SLUGS.Connections)}
                 />
             <div className={classes.div}>
